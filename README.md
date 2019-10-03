@@ -1,2 +1,2 @@
-# stokmanager
-Contoh Aplikasi sederhana stokmanager
+# stokmanagement
+Contoh Aplikasi sederhana stokmanagement
