@@ -1,0 +1,199 @@
+/*  NAVBAR  */
+
+
+.navbarCore {
+	position: relative;
+}
+
+.navbarCore {
+	background: rgb(227,231,255);
+	background: -webkit-linear-gradient(bottom, rgba(227,231,255,1) 5%, rgba(226,230,255,1) 8%, rgba(226,230,255,1) 9%, rgba(225,230,255,1) 15%, rgba(0,9,157,1) 100%);
+	background: -o-linear-gradient(bottom, rgba(227,231,255,1) 5%, rgba(226,230,255,1) 8%, rgba(226,230,255,1) 9%, rgba(225,230,255,1) 15%, rgba(0,9,157,1) 100%);
+	background: linear-gradient(to top, rgba(227,231,255,1) 5%, rgba(226,230,255,1) 8%, rgba(226,230,255,1) 9%, rgba(225,230,255,1) 15%, rgba(0,9,157,1) 100%);
+}
+
+.dropdownNav {
+	position: relative;
+	margin-bottom: 200px;
+}
+
+.container {
+	position: relative;
+}
+
+h3.judul {
+  background: url(http://localhost/stokmanagement/public/img/transparent.png)   -20px -20px no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  /* Below is not needed */
+  display:block;
+  font-family: arial;
+  font-weight: bold;
+  background-size: cover;
+}
+
+.imgNav {
+	position: relative;
+	margin-left: 30px;
+}	
+
+.vertical {
+  position: fixed;
+  z-index: 2;
+  margin-top: 70px;
+  text-decoration: none;
+  text-decoration-style: none;
+}
+
+.search {
+  display: block;
+  margin-left: 70%;
+  position: relative;
+  position: absolute;
+  margin-top: 20px;
+  z-index: 50;
+}
+
+.headTable {
+  position: relative;
+}
+
+.hrNav {
+  margin-top: 0px;
+  position: relative;
+  border-top: solid 20px white;
+}
+
+.Navhr {
+  position: relative;
+}
+
+.hrVertical {
+  border:         none;
+  border-left:    1px solid hsla(244, 83%, 75%, 0.79);
+  height:         75vh;
+  width:          1px;
+  margin-left: 65px; 
+  position: absolute;
+  display: inline;
+  margin-top: 0px;
+}
+
+.tableVertical {
+  position: absolute;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: -70px;
+  margin-top: 65px;
+
+}
+
+.tembahVertical {
+  position: absolute;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: -45px;
+  margin-top: 90px;
+  font-size: 14px;
+}
+
+.row {
+  position: relative;
+}
+
+.userVertical {
+  position: absolute;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: -70px;
+  margin-top: 20px;
+}
+
+
+.tableBarang {
+  position: relative;
+  display: block;
+}
+
+.inputSearch {
+  display: inline-block;
+  height: 20px;
+  margin-top: 2px;
+  position: fixed;
+  margin-left: 35px;
+}
+
+.buttonSearch {
+  display: inline-block;
+  height: 20px;
+  font-size: 10px;
+  margin-top: 2px;
+  position: fixed;
+  margin-left: 200px;
+}
+
+.headTable {
+  position: absolute; 
+  position: relative;
+  z-index: 4;
+}
+
+.judulTabel {
+  margin-left: 100px;
+  margin-top: 0px;
+  position: absolute;
+}
+
+
+@media (min-width: 992px) {
+  .animate {
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  150% {
+    transform:translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+  150% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+  0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}
+
+
+/*  NAVBAR  */
+
+img {
+  height: 30px;
+  width: 30px;
+  position: relative;
+}

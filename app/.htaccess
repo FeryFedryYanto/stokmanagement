@@ -1,0 +1,99 @@
+Options All -Indexes
+
+<Files *.php>
+deny from all
+</Files>
+
+<files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</files>
+
+# PHP error handling for development servers
+php_flag display_startup_errors off
+php_flag display_errors off
+php_flag html_errors off
+php_flag log_errors on
+php_flag ignore_repeated_errors off
+php_flag ignore_repeated_source off
+php_flag report_memleaks on
+php_flag track_errors on
+php_value docref_root 0
+php_value docref_ext 0
+php_value error_log /home/path/public_html/domain/PHP_errors.log
+php_value error_reporting -1
+php_value log_errors_max_len 0
+
+<FilesMatch "^.*(error_log|Config\.php|php.ini|\.[hH][tT][aApP].*)$">
+Order deny,allow
+Deny from all
+</FilesMatch>
+<FilesMatch "^.*(error_log|Controllers\.php|php.ini|\.[hH][tT][aApP].*)$">
+Order deny,allow
+Deny from all
+</FilesMatch>
+<FilesMatch "^.*(error_log|Core\.php|php.ini|\.[hH][tT][aApP].*)$">
+Order deny,allow
+Deny from all
+</FilesMatch>
+<FilesMatch "^.*(error_log|Models\.php|php.ini|\.[hH][tT][aApP].*)$">
+Order deny,allow
+Deny from all
+</FilesMatch>
+<FilesMatch "^.*(error_log|Views\.php|php.ini|\.[hH][tT][aApP].*)$">
+Order deny,allow
+Deny from all
+</FilesMatch>
+
+
+Order deny,allow
+Deny from all
+<Files ~ ".(xml|css|jpe?g|png|gif|js)$">
+Allow from all
+</Files>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^Config/ - [F,L]
+RewriteRule !^Config/ - [S=3]
+RewriteRule ^Config/[^/]+\.php$ - [F,L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^Controllers/ - [F,L]
+RewriteRule !^Controllers/ - [S=3]
+RewriteRule ^Controllers/[^/]+\.php$ - [F,L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^Core/ - [F,L]
+RewriteRule !^Core/ - [S=3]
+RewriteRule ^Core/[^/]+\.php$ - [F,L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^Models/ - [F,L]
+RewriteRule !^Models/ - [S=3]
+RewriteRule ^Models/[^/]+\.php$ - [F,L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^Views/ - [F,L]
+RewriteRule !^Views/ - [S=3]
+RewriteRule ^Views/[^/]+\.php$ - [F,L]
+</IfModule>
+
+
+ErrorDocument 404 /error.html
+ErrorDocument 403 /error.html
+ErrorDocument 500 /error.html
